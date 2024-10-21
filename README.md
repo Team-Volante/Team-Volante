@@ -45,9 +45,9 @@ This project is fully developed and maintained by **[harshendram](https://github
 
 ---
 
-### Email
+### 📬 Email 
 
-For direct inquiries, please email us at📬teamvolante@gmail.com
+For direct inquiries, please email us at: teamvolante@gmail.com
  
 
 ## 📜 License
