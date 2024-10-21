@@ -2,6 +2,7 @@
 
 [![Website](https://img.shields.io/badge/Website-Team--Volante-blue)](https://team-volante.github.io/Team-Volante/)
 [![Established](https://img.shields.io/badge/Established-2014-brightgreen)](https://team-volante.github.io/Team-Volante/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Welcome to **Team Volante**, a passionate student club dedicated to pushing the boundaries of engineering and innovation. Established in **2014**, we started as a Go-Kart building team and have evolved into competitors in the **eBAJA** series, designing electric buggies that are both sustainable and high-performance. 🏎️💨
 
@@ -38,4 +39,13 @@ Interested in joining or supporting our team? Reach out, collaborate, or follow 
 
 ---
 
-**Team Volante** - Steering the future of electric vehicles since 2014.
+## ⚙️ Developed By
+
+This project is fully developed and maintained by **[harshendram](https://github.com/harshendram)**.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
