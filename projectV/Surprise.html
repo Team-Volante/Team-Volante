@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volante Surprise</title>
+    <!-- favicon  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="imagesvolante/favicon_io (2)/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="imagesvolante/favicon_io (2)/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="imagesvolante/favicon_io (2)/favicon-16x16.png"
+    />
+    <link rel="manifest" href="imagesvolante/favicon_io (2)/site.webmanifest" />
+
+    <style>
+      body {
+        margin: 0; /* Remove default body margin */
+        display: flex; /* Flexbox for centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh; /* Full viewport height */
+        background-color: black; /* Background color */
+        color: white; /* Text color */
+      }
+      h1 {
+        font-weight: 800;
+      }
+
+      #splineContainer {
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+      }
+    </style>
+    <!-- Load the Spline viewer script -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.30/build/spline-viewer.js"
+    ></script>
+  </head>
+  <body>
+    <div id="splineContainer">
+      <center><h1>Surprise!! Complete the Laps!!</h1></center>
+      <spline-viewer
+        url="https://prod.spline.design/52LwRt7C1MLqWUGL/scene.splinecode"
+      ></spline-viewer>
+    </div>
+
+    <script>
+      // Initialize the Spline viewer
+      window.onload = function () {
+        const container = document.getElementById("splineContainer");
+        const viewer = new SplineViewer(container);
+        viewer.load(
+          "https://prod.spline.design/52LwRt7C1MLqWUGL/scene.splinecode"
+        );
+      };
+    </script>
+  </body>
+</html>
