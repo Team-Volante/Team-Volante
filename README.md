@@ -9,8 +9,8 @@ Welcome to **Team Volante**, a passionate student club dedicated to pushing the 
 ## 🚀 Our Journey
 
 - **Founded**: 2014
-- **Competitions**: Go-Karts, eBAJA
-- **Achievements**: Multiple competition wins and recognition
+- **Competitions**: Go-Karts, eBAJA,Edgeline champions(X2),SAJA E-BAJA,C0C,BFKCT,NEKC etc.
+- **Achievements**: Most Awarded racing club in Ramaiah Institute of Technology.
 - **Research**: Alumni have contributed to several **published research papers** on automotive technology and innovations.
 
 ## 🏆 Achievements
