@@ -45,6 +45,11 @@ This project is fully developed and maintained by **[harshendram](https://github
 
 ---
 
+### Email
+
+For direct inquiries, please email us at📬teamvolante@gmail.com
+ 
+
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
