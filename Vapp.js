@@ -38,7 +38,18 @@ window.onresize = function() {
   }
 };
 
+//modal display logic
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('posterModal');
+  modal.classList.add('show');
+});
 
+
+// Function to close the modal
+function closeModal() {
+  const modal = document.getElementById('posterModal');
+  modal.classList.remove('show');
+}
 
 var slideIndex = 0;
 showSlides();
