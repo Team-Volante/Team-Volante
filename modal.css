@@ -44,8 +44,7 @@
 .modal-link {
   text-decoration: underline;
   color: white;
-  font-size: medium;
-  font-weight: 200;
+  font-weight: 600;
 }
 
 .modal-content img {
@@ -79,7 +78,7 @@
 
 .close-btn {
   align-self: flex-start;
-  padding: 0.8vh 2vw;
+  padding: 1vh 3vw;
   background-color: transparent;
   border: 2px solid #ff4747;
   color: #ff4747;
