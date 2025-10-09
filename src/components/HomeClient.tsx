@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import SplineViewer from "@/components/SplineViewer";
+import { usePathname } from "next/navigation";
 
 interface HomeClientProps {
   // Add any props if needed
@@ -9,65 +10,75 @@ interface HomeClientProps {
 
 export default function HomeClient({}: HomeClientProps) {
   const [sponsorYear, setSponsorYear] = useState(2024);
+  const pathname = usePathname();
+  
+  // Function to get base URL that works with GitHub Pages and local development
+  const getBaseUrl = () => {
+    // When running locally or in production where basePath isn't set
+    if (pathname.startsWith('/Team-Volante')) {
+      return '/Team-Volante';
+    }
+    return '';
+  };
 
   // Sponsor data for both years
   const sponsors2024 = [
     {
-      image: "/imagesvolante/sponsor images/abs.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/abs.jpg`,
       title: "ABS (Title Sponsor)",
       description:
         "ABS, with its strong motorsports heritage, brings high-performance engineering to the track. Their support equips our go-kart racing team with the advanced technology needed to excel in competitive racing. With ABS backing us, we are better prepared to push the limits and achieve success on the track.",
     },
     {
-      image: "/imagesvolante/sponsor images/karnatakabank.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/karnatakabank.jpg`,
       title: "Karnataka Bank Ltd. (Team Sponsor)",
       description:
         "A major financial institution in India, Karnataka Bank offers a range of banking services, from personal loans and savings accounts to corporate banking services. It's well-known for its presence across India and focuses on modern banking solutions.",
     },
     {
-      image: "/imagesvolante/sponsor images/evbattery solutions.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/evbattery solutions.jpg`,
       title: "EV Battery Solutions (Product Sponsor)",
       description:
         "Specializing in lithium-ion battery packs for electric vehicles, EV Battery Solutions supports sustainable and green automotive innovations. They are likely contributing their expertise to power electric vehicles efficiently.",
     },
     {
-      image: "/imagesvolante/sponsor images/metaflex.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/metaflex.jpg`,
       title: "METAFLEX (Product Sponsor)",
       description:
         "Metaflex is a leading name in industrial solutions, possibly in the field of manufacturing or materials technology. Their presence as a sponsor suggests involvement in advanced materials or solutions that aid automotive development.",
     },
     {
-      image: "/imagesvolante/sponsor images/kelly.png",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/kelly.png`,
       title: "Kelly Controls LLC (Product Sponsor)",
       description:
         'Kelly Controls is known for its focus on clean energy, particularly in creating efficient motor controllers for electric vehicles. Their motto, "Lead to Clean World," reinforces their emphasis on sustainable and eco-friendly solutions.',
     },
     {
-      image: "/imagesvolante/sponsor images/sulakshaai.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/sulakshaai.jpg`,
       title: "Sulaksha Packaging (Product Sponsor)",
       description:
         "Sulaksha is involved in the packaging industry, likely providing specialized packaging solutions for various sectors, ensuring products are transported safely and efficiently.",
     },
     {
-      image: "/imagesvolante/sponsor images/vptai.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/vptai.jpg`,
       title: "VPT Components (Product Sponsor)",
       description:
         "VPT Components has a strong reputation for creating high-reliability electronic parts, and they know the importance of precision and durability. Their sponsorship of our go-kart racing team shows their dedication to helping young engineers like us push the limits of technology and performance, ensuring we race with the best equipment and reliability.",
     },
     {
-      image: "/imagesvolante/sponsor images/tours.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/tours.jpg`,
       title: "Destiny Lion Tours & Travels (Accommodation Partner)",
       description:
         "A travel and tour services provider, Destiny Lion organizes trips and accommodations, possibly offering solutions for event attendees or participants.Even helping in prior lodge-booking for our members.",
     },
     {
-      image: "/imagesvolante/sponsor images/inertia.png",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/inertia.png`,
       title: "Inertia (Apparel Partner)",
       description:
         "Inertia is involved in providing apparel, which may be specifically tailored for motorsport or team events. T-shirts,jackets racing gears,swags etc making our club luxurious.They are responsible for the team's uniforms and branded clothing for the event.",
     },
     {
-      image: "/imagesvolante/sponsor images/Trusteddel.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/Trusteddel.jpg`,
       title: "Trusted Delivery (Logistic Partner)",
       description:
         "Trusted Delivery is a leading logistics provider, known for reliable and efficient services across sectors. Focused on customer satisfaction, they ensure safe, timely deliveries and are a trusted partner for critical shipments. We are proud to have them as our sponsor, supporting innovation in our racing journey.",
@@ -82,37 +93,37 @@ export default function HomeClient({}: HomeClientProps) {
 
   const sponsors2025 = [
     {
-      image: "/imagesvolante/sponsor images/Ananth_Technologies.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/Ananth_Technologies.jpg`,
       title: "Ananth Technologies",
       description:
         "Ananth Technologies is a leading provider of innovative technology solutions, specializing in advanced engineering systems and digital transformation. Their partnership brings cutting-edge technical expertise to our racing endeavors.",
     },
     {
-      image: "/imagesvolante/sponsor images/starya_logo.png",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/starya_logo.png`,
       title: "Starya Mobility",
       description:
         "Starya Mobility is revolutionizing the transportation sector with sustainable and efficient mobility solutions. Their support helps us explore new frontiers in electric vehicle technology and sustainable racing practices.",
     },
     {
-      image: "/imagesvolante/sponsor images/SM_Education_Consultancy.png",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/SM_Education_Consultancy.png`,
       title: "SM Education Consultancy",
       description:
         "SM Education Consultancy provides comprehensive educational services and career guidance. Their partnership supports our team's academic growth and professional development in engineering and motorsports.",
     },
     {
-      image: "/imagesvolante/sponsor images/Industrial_furnance_control.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/Industrial_furnance_control.jpg`,
       title: "Industrial Furnace and Control",
       description:
         "Industrial Furnace and Control specializes in high-temperature industrial equipment and control systems. Their expertise in precision manufacturing and thermal management contributes to our advanced engineering capabilities.",
     },
     {
-      image: "/imagesvolante/sponsor images/AK_Alumininum.png",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/AK_Alumininum.png`,
       title: "AK Aluminium",
       description:
         "AK Aluminium is a premier supplier of high-quality aluminum products and solutions. Their lightweight, durable materials are essential for our racing vehicle construction, providing the perfect balance of strength and performance.",
     },
     {
-      image: "/imagesvolante/sponsor images/D.B.Power_Rentals.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/D.B.Power_Rentals.jpg`,
       title: "DB Power Rentals",
       description:
         "DB Power Rentals is a trusted provider of reliable power solutions and equipment rentals. Their high-quality power systems and generators ensure our team has uninterrupted power supply during competitions and testing phases.",
@@ -442,7 +453,7 @@ export default function HomeClient({}: HomeClientProps) {
         <div className="container">
           <nav>
             <img
-              src="/imagesvolante/logotrial1.webp"
+              src={`${getBaseUrl()}/imagesvolante/logotrial1.webp`}
               className="logo"
               alt="Team Volante Logo"
             />
@@ -524,7 +535,7 @@ export default function HomeClient({}: HomeClientProps) {
           alignItems: "center",
         }}
       >
-        <a href="/feature">
+        <a href={`${getBaseUrl()}/feature`}>
           <button className="btn3">View our virtual buggy!</button>
         </a>
       </div>
@@ -538,13 +549,13 @@ export default function HomeClient({}: HomeClientProps) {
                 <div className="about-carousel-container">
                   <div className="about-carousel-slide active">
                     <img
-                      src="/imagesvolante/aboutus.jpg"
+                      src={`${getBaseUrl()}/imagesvolante/aboutus.jpg`}
                       alt="Team Volante About Us"
                     />
                   </div>
                   <div className="about-carousel-slide">
                     <img
-                      src="/imagesvolante/buggycarousel.jpg"
+                      src={`${getBaseUrl()}/imagesvolante/buggycarousel.jpg`}
                       alt="Team Volante Buggy"
                     />
                   </div>
@@ -699,7 +710,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <video controls autoPlay muted className="video">
-          <source src="/imagesvolante/video.mp4" type="video/mp4" />
+          <source src={`${getBaseUrl()}/imagesvolante/video.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -715,21 +726,21 @@ export default function HomeClient({}: HomeClientProps) {
             <div className="carousel-container">
               <div className="carousel-slides">
                 <div className="carousel-slide active">
-                  <img src="/imagesvolante/classof25.jpg" alt="Class of 25" />
+                  <img src={`${getBaseUrl()}/imagesvolante/classof25.jpg`} alt="Class of 25" />
                   <div className="carousel-content">
                     <h3>CLASS OF '26</h3>
                     <p>Our current amazing team from 2025</p>
                   </div>
                 </div>
                 <div className="carousel-slide">
-                  <img src="/imagesvolante/Grouppic2.jpg" alt="Class of 24" />
+                  <img src={`${getBaseUrl()}/imagesvolante/Grouppic2.jpg`} alt="Class of 24" />
                   <div className="carousel-content">
                     <h3>CLASS OF '24</h3>
                     <p>Our talented team from 2024</p>
                   </div>
                 </div>
                 <div className="carousel-slide">
-                  <img src="/imagesvolante/Grouppic.jpg" alt="Class of 23" />
+                  <img src={`${getBaseUrl()}/imagesvolante/Grouppic.jpg`} alt="Class of 23" />
                   <div className="carousel-content">
                     <h3>CLASS OF '23</h3>
                     <p>Our amazing team from 2023</p>
@@ -771,7 +782,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/Prajwal_baretto.jpeg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/Prajwal_baretto.jpeg`}
                     alt="Prajwal Baretto"
                   />
                 </div>
@@ -792,7 +803,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/shriya_iyer.jpg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/shriya_iyer.jpg`}
                     alt="Shriya Iyer"
                   />
                 </div>
@@ -813,7 +824,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/ninnad.jpg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/ninnad.jpg`}
                     alt="Ninnad P"
                   />
                 </div>
@@ -834,7 +845,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/Samuel.jpg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/Samuel.jpg`}
                     alt="Samuel Jabez"
                   />
                 </div>
@@ -860,7 +871,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/Harshini.jpg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/Harshini.jpg`}
                     alt="Harshini"
                   />
                 </div>
@@ -883,7 +894,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/suraj.jpg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/suraj.jpg`}
                     alt="Suraj Am"
                   />
                 </div>
@@ -904,7 +915,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/sudishwaran.jpg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/sudishwaran.jpg`}
                     alt="Sudishwaran"
                   />
                 </div>
@@ -925,7 +936,7 @@ export default function HomeClient({}: HomeClientProps) {
               <div className="card">
                 <div className="profile-img">
                   <img
-                    src="/imagesvolante/profile_imgs/Samiksh.jpg"
+                    src={`${getBaseUrl()}/imagesvolante/profile_imgs/Samiksh.jpg`}
                     alt="Samiksh Shetty"
                   />
                 </div>
@@ -954,7 +965,7 @@ export default function HomeClient({}: HomeClientProps) {
       <div className="timeline" id="timeline2">
         <div className="containerhistory left-container">
           <img
-            src="/imagesvolante/logovolante.png"
+            src={`${getBaseUrl()}/imagesvolante/logovolante.png`}
             className="imgfix"
             alt="Team Volante Logo"
           />
