@@ -148,8 +148,8 @@ export default function ClientScripts() {
         event.preventDefault();
         // Get base URL for GitHub Pages compatibility
         const getBaseUrl = () => {
-          // Since we have basePath configured in next.config.js, Next.js handles the base path automatically
-          return '';
+          // Since we have basePath configured in next.config.js, we need to manually add the basePath for GitHub Pages
+          return '/Team-Volante';
         };
         window.open(`${getBaseUrl()}/surprise`, '_blank');
       });

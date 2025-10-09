@@ -106,7 +106,7 @@ body::-webkit-scrollbar {
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
     z-index: -1; /* Sends it behind other elements */
-    background-image: url("/imagesvolante/goodimage.webp"); /* Use a background image */
+    background-image: url("/Team-Volante/imagesvolante/goodimage.webp"); /* Use a background image */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
     overflow: hidden; /* Prevents overflow of child elements */
