@@ -146,7 +146,17 @@ export default function ClientScripts() {
     if (surpriseButton) {
       surpriseButton.addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('/surprise', '_blank');
+        // Get base URL for GitHub Pages compatibility
+        const getBaseUrl = () => {
+          if (typeof window !== 'undefined') {
+            if (window.location.hostname === 'team-volante.github.io' || 
+                window.location.pathname.startsWith('/Team-Volante')) {
+              return '/Team-Volante';
+            }
+          }
+          return '';
+        };
+        window.open(`${getBaseUrl()}/surprise`, '_blank');
       });
     }
 

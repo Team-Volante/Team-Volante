@@ -87,7 +87,7 @@ export default function HomeClient({}: HomeClientProps) {
         "Trusted Delivery is a leading logistics provider, known for reliable and efficient services across sectors. Focused on customer satisfaction, they ensure safe, timely deliveries and are a trusted partner for critical shipments. We are proud to have them as our sponsor, supporting innovation in our racing journey.",
     },
     {
-      image: "/imagesvolante/sponsor images/GT&C.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/GT&C.jpg`,
       title: "GAN Tools and Components",
       description:
         "We are proudly sponsored by GAN Tools and Components, who have generously provided us with a range of high-quality parts. Their support is instrumental in advancing our project, enabling us to build and refine our designs with precision. We are grateful for their partnership.",
@@ -132,7 +132,7 @@ export default function HomeClient({}: HomeClientProps) {
         "DB Power Rentals is a trusted provider of reliable power solutions and equipment rentals. Their high-quality power systems and generators ensure our team has uninterrupted power supply during competitions and testing phases.",
     },
     {
-      image: "/imagesvolante/sponsor images/GT&C.jpg",
+      image: `${getBaseUrl()}/imagesvolante/sponsor images/GT&C.jpg`,
       title: "GAN Tools and Components",
       description:
         "We are proudly sponsored by GAN Tools and Components, who have generously provided us with a range of high-quality parts. Their support is instrumental in advancing our project, enabling us to build and refine our designs with precision.",
@@ -189,17 +189,17 @@ export default function HomeClient({}: HomeClientProps) {
     let carouselInterval: NodeJS.Timeout;
     const slides = [
       {
-        image: "/imagesvolante/Grouppic.jpg",
+        image: `${getBaseUrl()}/imagesvolante/Grouppic.jpg`,
         title: "CLASS OF '23",
         description: "Our amazing team from 2023",
       },
       {
-        image: "/imagesvolante/Grouppic2.jpg",
+        image: `${getBaseUrl()}/imagesvolante/Grouppic2.jpg`,
         title: "CLASS OF '24",
         description: "Our talented team from 2024",
       },
       {
-        image: "/imagesvolante/grouppic3 (2).jpg",
+        image: `${getBaseUrl()}/imagesvolante/grouppic3 (2).jpg`,
         title: "CLASS OF '26",
         description: "Our promising team from 2026",
       },
@@ -377,7 +377,7 @@ export default function HomeClient({}: HomeClientProps) {
     if (surpriseButton) {
       surpriseButton.addEventListener("click", function (event) {
         event.preventDefault();
-        window.open("/surprise", "_blank");
+        window.open(`${getBaseUrl()}/surprise`, "_blank");
       });
     }
 

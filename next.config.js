@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const base = process.env.GH_PAGES_BASE || process.env.PUBLIC_URL || "";
+// Using hard-coded value for GitHub Pages deployment to ensure consistency
+const base = "/Team-Volante"; // Exact case as your repository name
 const path = require("path");
 
 const nextConfig = {
@@ -9,9 +10,9 @@ const nextConfig = {
     unoptimized: true,
   },
   // When deploying to GitHub Pages under a repository (e.g. /Team-Volante/)
-  // set GH_PAGES_BASE=/Team-Volante to ensure assets and links are prefixed.
-  basePath: base || undefined,
-  assetPrefix: base || undefined,
+  // The basePath and assetPrefix must match the exact case of your repository name
+  basePath: base,
+  assetPrefix: base,
   // Silence the warning about multiple lockfiles
   outputFileTracingRoot: path.join(__dirname, ".."),
 };

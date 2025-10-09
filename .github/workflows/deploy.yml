@@ -34,8 +34,7 @@ jobs:
         run: npm ci
       - name: Build with Next.js
         run: npm run build
-        env:
-          GH_PAGES_BASE: /Team-Volante
+        # No need for GH_PAGES_BASE env var as we hard-coded it in next.config.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
