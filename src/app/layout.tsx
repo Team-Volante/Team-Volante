@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AssetPathFix from '@/components/AssetPathFix'
 
 export const metadata: Metadata = {
   title: 'Team-Volante - Racing Club at Ramaiah Institute of Technology',

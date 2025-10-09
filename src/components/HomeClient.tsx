@@ -14,9 +14,12 @@ export default function HomeClient({}: HomeClientProps) {
   
   // Function to get base URL that works with GitHub Pages and local development
   const getBaseUrl = () => {
-    // When running locally or in production where basePath isn't set
-    if (pathname.startsWith('/Team-Volante')) {
-      return '/Team-Volante';
+    // Check if we're running on GitHub Pages (team-volante.github.io/Team-Volante)
+    if (typeof window !== 'undefined') {
+      if (window.location.hostname === 'team-volante.github.io' || 
+          pathname.startsWith('/Team-Volante')) {
+        return '/Team-Volante';
+      }
     }
     return '';
   };
@@ -983,7 +986,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <div className="containerhistory right-container">
-          <img src="/imagesvolante/logovolante.png" alt="Team Volante Logo" />
+          <img src={`${getBaseUrl()}/imagesvolante/logovolante.png`} alt="Team Volante Logo" />
           <div className="text-box">
             <h2>COC-Champion Of Champions</h2>
             <small>2019-2020</small>
@@ -1000,7 +1003,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <div className="containerhistory left-container">
-          <img src="/imagesvolante/logovolante.png" alt="Team Volante Logo" />
+          <img src={`${getBaseUrl()}/imagesvolante/logovolante.png`} alt="Team Volante Logo" />
           <div className="text-box">
             <h2>NEKC-National Electric Kart Championship</h2>
             <small>2020</small>
