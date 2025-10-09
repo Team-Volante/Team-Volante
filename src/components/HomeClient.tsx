@@ -1018,7 +1018,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <div className="containerhistory right-container">
-          <img src="/imagesvolante/logovolante.png" alt="Team Volante Logo" />
+          <img src={`${getBaseUrl()}/imagesvolante/logovolante.png`} alt="Team Volante Logo" />
           <div className="text-box">
             <h2>SAE E baja</h2>
             <small>2020</small>
@@ -1033,7 +1033,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <div className="containerhistory left-container">
-          <img src="/imagesvolante/logovolante.png" alt="Team Volante Logo" />
+          <img src={`${getBaseUrl()}/imagesvolante/logovolante.png`} alt="Team Volante Logo" />
           <div className="text-box">
             <h2>Mega atv championship</h2>
             <small>2021-2022</small>
@@ -1049,7 +1049,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <div className="containerhistory right-container">
-          <img src="/imagesvolante/logovolante.png" alt="Team Volante Logo" />
+          <img src={`${getBaseUrl()}/imagesvolante/logovolante.png`} alt="Team Volante Logo" />
           <div className="text-box">
             <h2>Edgeline go-kart championship</h2>
             <small>2022-2023</small>
@@ -1064,7 +1064,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <div className="containerhistory left-container">
-          <img src="/imagesvolante/logovolante.png" alt="Team Volante Logo" />
+          <img src={`${getBaseUrl()}/imagesvolante/logovolante.png`} alt="Team Volante Logo" />
           <div className="text-box">
             <h2>Edgeline go-kart championship</h2>
             <small>2023-2024</small>
@@ -1079,7 +1079,7 @@ export default function HomeClient({}: HomeClientProps) {
         </div>
 
         <div className="containerhistory right-container">
-          <img src="/imagesvolante/logovolante.png" alt="Team Volante Logo" />
+          <img src={`${getBaseUrl()}/imagesvolante/logovolante.png`} alt="Team Volante Logo" />
           <div className="text-box">
             <h2>Dirt Kart Design Challenge (DKDC) S2 Overall Champions</h2>
             <small>2025</small>

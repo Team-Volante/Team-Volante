@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import AssetPathFix from '@/components/AssetPathFix'
 
 export const metadata: Metadata = {
   title: 'Team-Volante - Racing Club at Ramaiah Institute of Technology',
@@ -16,15 +15,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/imagesvolante/favicon_io (2)/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/imagesvolante/favicon_io (2)/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/imagesvolante/favicon_io (2)/favicon.ico' }
+      { url: process.env.GH_PAGES_BASE + '/imagesvolante/favicon_io (2)/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: process.env.GH_PAGES_BASE + '/imagesvolante/favicon_io (2)/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: process.env.GH_PAGES_BASE + '/imagesvolante/favicon_io (2)/favicon.ico' }
     ],
     apple: [
-      { url: '/imagesvolante/favicon_io (2)/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+      { url: process.env.GH_PAGES_BASE + '/imagesvolante/favicon_io (2)/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ],
   },
-  manifest: '/imagesvolante/favicon_io (2)/site.webmanifest',
+  manifest: process.env.GH_PAGES_BASE + '/imagesvolante/favicon_io (2)/site.webmanifest',
   verification: {
     google: 'mTGdo0YVo7guwOeOs4K9Fz1Yq9SUTxfoq2xrMpmR9Cg'
   }
@@ -38,6 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Redirect script for client-side routing on GitHub Pages */}
+        <script src="/redirect-script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
