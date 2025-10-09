@@ -28,7 +28,7 @@ jobs:
       - name: Build 🏗️
         run: npm run build
         env:
-          GH_PAGES_BASE: /team-volante
+          GH_PAGES_BASE: /Team-Volante
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
