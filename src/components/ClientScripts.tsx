@@ -148,12 +148,7 @@ export default function ClientScripts() {
         event.preventDefault();
         // Get base URL for GitHub Pages compatibility
         const getBaseUrl = () => {
-          if (typeof window !== 'undefined') {
-            if (window.location.hostname === 'team-volante.github.io' || 
-                window.location.pathname.startsWith('/Team-Volante')) {
-              return '/Team-Volante';
-            }
-          }
+          // Since we have basePath configured in next.config.js, Next.js handles the base path automatically
           return '';
         };
         window.open(`${getBaseUrl()}/surprise`, '_blank');

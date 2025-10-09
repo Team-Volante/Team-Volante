@@ -14,13 +14,8 @@ export default function HomeClient({}: HomeClientProps) {
   
   // Function to get base URL that works with GitHub Pages and local development
   const getBaseUrl = () => {
-    // Check if we're running on GitHub Pages (team-volante.github.io/Team-Volante)
-    if (typeof window !== 'undefined') {
-      if (window.location.hostname === 'team-volante.github.io' || 
-          pathname.startsWith('/Team-Volante')) {
-        return '/Team-Volante';
-      }
-    }
+    // Since we have basePath configured in next.config.js, Next.js handles the base path automatically
+    // We just need to return empty string for local development
     return '';
   };
 

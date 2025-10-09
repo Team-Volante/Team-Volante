@@ -9,21 +9,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Team-Volante - Racing Club | Ramaiah Institute of Technology, Bangalore',
     description: 'Team-Volante Racing Club specializes in building e-kart buggies and go-karts, winning multiple national competitions. Learn more about our journey in automotive innovation.',
-    images: ['/Team-Volante/imagesvolante/aboutus.jpg'],
+    images: ['/imagesvolante/aboutus.jpg'],
     url: 'https://team-volante.github.io/Team-Volante/',
     type: 'website',
   },
   icons: {
     icon: [
-      { url: '/Team-Volante/imagesvolante/favicon_io (2)/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/Team-Volante/imagesvolante/favicon_io (2)/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/Team-Volante/imagesvolante/favicon_io (2)/favicon.ico' }
+      { url: '/imagesvolante/favicon_io (2)/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/imagesvolante/favicon_io (2)/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/imagesvolante/favicon_io (2)/favicon.ico' }
     ],
     apple: [
-      { url: '/Team-Volante/imagesvolante/favicon_io (2)/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+      { url: '/imagesvolante/favicon_io (2)/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ],
   },
-  manifest: '/Team-Volante/imagesvolante/favicon_io (2)/site.webmanifest',
+  manifest: '/imagesvolante/favicon_io (2)/site.webmanifest',
   verification: {
     google: 'mTGdo0YVo7guwOeOs4K9Fz1Yq9SUTxfoq2xrMpmR9Cg'
   }
@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Redirect script for client-side routing on GitHub Pages */}
-        <script src="/Team-Volante/redirect-script.js"></script>
+        <script src="/redirect-script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
